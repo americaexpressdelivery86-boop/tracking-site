@@ -32,14 +32,15 @@ input, button {
 function trackPackage() {
     const tracking = document.getElementById("trackingNumber").value;
 
- else if (tracking === "Tra916w6w") {
-    document.getElementById("result").innerHTML =
-    "🚚 Status: In Transit<br>Location: Phoenix, Arizona";
-}
-    } else if (tracking === "TRK654321") {
+    if (tracking === "Tra916w6w") {
+        document.getElementById("result").innerHTML =
+        "🚚 Status: In Transit<br>Location: Phoenix, Arizona";
+    }
+    else if (tracking === "TRK654321") {
         document.getElementById("result").innerHTML =
         "🚚 Status: Out for Delivery";
-    } else {
+    }
+    else {
         document.getElementById("result").innerHTML =
         "❌ Tracking number not found.";
     }
