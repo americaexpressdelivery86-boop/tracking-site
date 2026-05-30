@@ -1,1 +1,49 @@
-index.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Universal Tracker</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+input, button {
+    padding: 10px;
+    margin: 5px;
+}
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+}
+</style>
+</head>
+<body>
+
+<h1>Universal Tracker</h1>
+<p>Enter your tracking number below:</p>
+
+<input type="text" id="trackingNumber" placeholder="Tracking Number">
+<button onclick="trackPackage()">Track</button>
+
+<div class="result" id="result"></div>
+
+<script>
+function trackPackage() {
+    const tracking = document.getElementById("trackingNumber").value;
+
+    if (tracking === "TRK123456") {
+        document.getElementById("result").innerHTML =
+        "📦 Status: In Transit<br>Location: Los Angeles, CA";
+    } else if (tracking === "TRK654321") {
+        document.getElementById("result").innerHTML =
+        "🚚 Status: Out for Delivery";
+    } else {
+        document.getElementById("result").innerHTML =
+        "❌ Tracking number not found.";
+    }
+}
+</script>
+
+</body>
+</html>
