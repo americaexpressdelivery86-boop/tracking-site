@@ -32,9 +32,10 @@ input, button {
 function trackPackage() {
     const tracking = document.getElementById("trackingNumber").value;
 
-    if (tracking === "TRK123456") {
-        document.getElementById("result").innerHTML =
-        "📦 Status: In Transit<br>Location: Arizona";
+  else if (tracking === "TRK999999") {
+    document.getElementById("result").innerHTML =
+    "📦 Status: Arrived at Local Facility<br>Location: Phoenix, Arizona";
+}
     } else if (tracking === "TRK654321") {
         document.getElementById("result").innerHTML =
         "🚚 Status: Out for Delivery";
